@@ -1,0 +1,44 @@
+  
+	 
+	 
+	 open(method,url,async)   :   规定请求的类型、URL 以及是否异步处理请求。
+
+             - method：请求的类型；GET 或 POST
+             - url：文件在服务器上的位置
+             - async：true（异步）或 false（同步）
+
+     send(string)             :  将请求发送到服务器。
+
+            - string：仅用于 POST 请求
+
+
+     请求方式
+             与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。
+
+            在以下情况中，请使用 POST 请求：
+                 - 无法使用缓存文件（更新服务器上的文件或数据库）
+                 - 向服务器发送大量数据（POST 没有数据量限制）
+                 - 发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
+
+     响应属性
+                 - responseText	获得字符串形式的响应数据。
+                 - responseXML	获得 XML 形式的响应数据。
+
+
+
+     onreadystatechange	：存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。
+
+     readyState  ：存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。
+
+                 - 0: 请求未初始化
+                 - 1: 服务器连接已建立
+                 - 2: 请求已接收
+                 - 3: 请求处理中
+                 - 4: 请求已完成，且响应已就绪
+     status
+                 - 200: "OK"
+                 - 404: 未找到页面
+
+
+
+版本老旧，现都用jQuery AJAX

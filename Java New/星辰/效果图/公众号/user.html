@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>房至尊</title>
+    <!-- 响应布局 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"  charset="utf-8">
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    </head>
+
+
+     <body>
+
+
+     <script>
+         function load(){
+             var xmlhttp;
+             if(window.XMLHttpRequest){
+                 //新版浏览器才有 的对象
+                 xmlhttp = new XMLHttpRequest();
+             }else{
+                 // 老版 IE6\IE5 用这个
+                 xmlhttp = new ActiveXobject("Microsoft.XMLHTTP");
+             }
+
+
+             xmlhttp.onreadystatechannge = function(){
+                if(xmlhttp.readyState==4&&status==200){
+                    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+                }
+             }
+
+             xmlhttp.open("GET","imsUser/src/main/webapp/index.html",true);
+             xmlhttp.send();
+         }
+
+     </script>
+
+     <body>
+
+
+     <button type="button" onclick="loadXMLDoc()">请求数据</button>
+     <div id="myDiv"></div>
+
+     </body>
+
+
+
+     open(method,url,async)   :   规定请求的类型、URL 以及是否异步处理请求。
+
+             - method：请求的类型；GET 或 POST
+             - url：文件在服务器上的位置
+             - async：true（异步）或 false（同步）
+
+     send(string)             :  将请求发送到服务器。
+
+            - string：仅用于 POST 请求
+
+
+     请求方式
+             与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。
+
+            在以下情况中，请使用 POST 请求：
+                 - 无法使用缓存文件（更新服务器上的文件或数据库）
+                 - 向服务器发送大量数据（POST 没有数据量限制）
+                 - 发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
+
+     响应属性
+                 - responseText	获得字符串形式的响应数据。
+                 - responseXML	获得 XML 形式的响应数据。
+
+
+
+     onreadystatechange	：存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。
+
+     readyState  ：存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。
+
+                 - 0: 请求未初始化
+                 - 1: 服务器连接已建立
+                 - 2: 请求已接收
+                 - 3: 请求处理中
+                 - 4: 请求已完成，且响应已就绪
+     status
+                 - 200: "OK"
+                 - 404: 未找到页面
+
+
+
+
+
+
+
+     </body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+基本数据网格  DataGrid
+
+基本DataGrid  http://www.jeasyui.net/demo/331.html
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic DataGrid - jQuery EasyUI Demo</title>
+		"加载路径
+        <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.7.0/themes/default/easyui.css">
+        <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.7.0/themes/icon.css">
+        <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.7.0/demo.css">
+        "调用方法
+		<script type="text/javascript" src="../../jquery-easyui-1.7.0/jquery.min.js"></script>
+        <script type="text/javascript" src="../../jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+
+    </head>
+    <body>
+        <script>
+            //用 function()包装数据，保证下面数据在页面渲染完成后加载
+            $(function(){
+					var json = [
+						{1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+						{1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+						{1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+						{1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+					]
+									  '本地加载'
+					$('#tt').datagrid('loadData', json);  //在 id为tt的  打印
+				}
+				);
+        </script>
+        
+        <table id="tt" class="easyui-datagrid" style="width:600px;height:250px"
+                   title="Load Data" iconCls="icon-save" fitColumns="true">    
+                <thead>
+                    <tr>
+                        <th field="1" width="80">一号</th>
+                        <th field="2" width="80">二号</th>
+                        <th field="3" width="80" align="right">三号</th>
+                        <th field="4" width="80" align="right">四号</th>
+                        <th field="5" width="80">五号</th>
+                        <th field="6" width="60" align="center">六号</th>
+
+                    </tr>
+                </thead>
+            </table>
+
+    </body>
+</html>
+
+		$( 
+		
+		
+		)

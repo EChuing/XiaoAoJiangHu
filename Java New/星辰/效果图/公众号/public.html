@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- ,user-scalable=0 -->
+    <title>JQ、EasyUI、bootstrap、VUE      -案例-</title>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<!--<head>
+
+    <meta name = “viewport” content = “width= device-width，initial-scale = 1.0” charset=UTF-8">
+    <link href = “assets/css/bootstrap-responsive.css” rel = “stylesheet” >
+
+    <title>jQuery EasyUI Demo</title>
+
+    <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.7.0/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.7.0/themes/icon.css">
+
+    <script type="text/javascript" src="../../jquery-easyui-1.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../../jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+
+</head>-->
+<body>
+<script>
+    //用 function()包装数据，保证下面数据在页面渲染完成后加载
+    $(function(){
+        var json = [
+            {1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+            {1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+            {1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+            {1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+        ]
+
+        $('#tt').datagrid('loadData', json);
+    });
+</script>
+
+<table id="tt" class="easyui-datagrid" style="width:580px;height:250px"
+       title="Load Data" iconCls="icon-save" fitColumns="true">
+    <thead>
+    <tr>
+        <th field="1" width="80">一号</th>
+        <th field="2" width="80">二号</th>
+        <th field="3" width="80" align="right">三号</th>
+        <th field="4" width="80" align="right">四号</th>
+        <th field="5" width="80">五号</th>
+        <th field="6" width="60" align="center">六号</th>
+    </tr>
+    </thead>
+</table>
+
+</body>
+
+<!--<br><br>bootstrap 演示<br><br>
+
+    <div class="container" style="width: 100px;height:100px">
+
+                <div class="row ">
+                        <div class="col-lg-1 bg-danger" style="padding: 10%;"></div>
+                        <div class="col-lg-10 "style="padding: 10%; background: yellow"></div>
+                        <div class="col-lg-1 bg-danger" style="padding: 10%;"></div>
+                </div>
+    </div>
+
+<br><br>vue演示<br><br>
+
+    <div id="app">
+    Hello Vue!
+    </div>
+    <script> &lt;!&ndash; 页面加载 后调用  &ndash;&gt;
+    var app = new Vue({
+    el: '#app',
+    data: {
+    message: 'Hello Vue!'
+    }
+    })
+    </script>-->
+
+
+</html>
