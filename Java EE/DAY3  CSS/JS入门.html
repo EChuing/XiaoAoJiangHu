@@ -1,0 +1,201 @@
+javaScritpt		负责与用户进行交互
+html			负责一个页面的结构
+css				负责一个页面的样式
+
+
+
+
+
+
+javascript 历史
+
+		微软  盖茨 认为未来是"视窗"的世界
+		网景  95年推出浏览器（导航者） 和 liveScript（具有校验功能），深受欢迎  后和sun合作  借用java名字 （javaScript）  
+
+
+
+
+
+97年欧洲计算机协会（ECMS）组织出来给javaSCript规定协议
+  "js组成"
+		1.ECMSScript（规定基本的语法）
+		2.BOM（浏览器对象模型）
+		3.DOM（文档对象模型）
+
+
+
+***********
+行为分离 
+		1.前端与后台分离，数据通过请求(AJAX)后台获取，
+			前端处理数据，后台不用插入变量
+		2.前端展现与数据分离，处理数据时， DOM代码和
+			处理数据代码要分开 清晰表达
+***********
+
+
+
+javascript特点：
+		交互性  信息动态交互
+		跨平台	 支持JS的都能运行
+		安全性（javascript的代码不能直接访问硬盘的内容）
+
+java、javascript 区别
+	javascript 网景公司的产品 基于对象语言 解析型语言 弱类语言 不需明确 都用var去声明
+	java	   sun公司的产品 面向对象语言 解析 编译语言 强类语言 声明是必须明确变量的数据类型
+	
+	E
+
+
+------------------------
+JavaScript
+	
+常用函数
+	alert("显示内容"); 弹出框
+	document.write("数据"); 向页面输出数据
+
+
+编写方式
+
+	1. 用 script 标签
+		格式：
+		<script type="text/javascript">
+				代码..
+		</script>
+	2.引入外部的javascript文件
+		格式：
+		<script src="1.js" type="text/javascript"> </script>
+
+		注：
+			script 标签是有开始和结束标签的， 不能再一个标签中结束
+			引用外部的JS ，  标签内不能继续编写代码
+
+			第二种好（复用性高）
+
+
+声明变量
+		格式：
+			var 变量名 = 数据;
+
+		输出语句：document.write（""）;
+
+
+
+查看数据类型
+
+		typeof 变量名
+
+JS 原始类型 和 声明变量
+
+	定义变量 都是用关键字 var     （ 可以存储任意数据类型
+			会随数据类型的不同而定义，相同数据会覆盖上一个）  
+
+	java 基本数据类型 byte short int long float double char boolean
+	js	 原始类型（数据类型） 五个：
+		string 字符串
+				var str = "abc"
+		number 数字类型
+		boolean 布尔  true / false
+		null
+		Undefined 
+
+
+
+
+字符串转数字
+		parseInt()	
+				字符串 换 整数
+				
+				若出现 "123abc123" 会取非数字前的数字	为: 123
+					"a123"   为：NAN not a number(不是一个数字)
+					"012"	 0开头 会去除0				为: 12
+					"0x10"	 0x开头 会转换为16进制		为: 16
+		
+		parseFloat()
+				字符串 转 小数
+
+				字符串是整数  为：还是整数
+				其余和上面功能一样
+					
+
+isNaN方法 （这个很奇葩）
+		is not a muber  不是一个数字
+
+		不是一个数字返回true ， 是一个数字 放回fales
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

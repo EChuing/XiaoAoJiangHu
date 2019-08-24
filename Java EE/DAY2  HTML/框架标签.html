@@ -1,0 +1,90 @@
+框架标签  
+
+	frameSet（fei sate）  可以被切割多次的页面
+						 只可以按照行或列切
+切割属性：
+	rows 行
+	cols 列
+
+    
+    frame   不能被切割的。 frame是位于frameSet中。（最小单位）
+    
+    iframe:  在一个网页中分隔一部分的位置显示另外一个网页的的信息。
+
+	
+
+  注意： frameSet 与 body不可以同时出现  优先显示第一个 
+
+
+index.html
+-----------------------------------
+</head>
+	将整个页面 按行 分为三部分 及其比例
+	<frameset  rows="20%,70%,*" >    *代表下剩的所有
+    	第一部分
+		<frame  src="top.html" />
+        第二部分 （页面按 竖分为 两部分）
+		<frameset cols="20%,*">
+        	<frame src="left.html" />
+            <frame name="center" src="center.html"/>   设置名字 便于链接跳转在这里显示
+        </frameset>
+		第三部分
+    	<frame src="foot.html"/>
+    </frameset><noframes></noframes>
+
+center.html
+-----------------------------------------
+<body>
+	公司创建于2006年，一直专注于java培训等...公司创建于2006年，一直专注于java培训等...公司创建于2006年，一直专注于java培训等...
+
+</body>
+
+left.html
+--------------------------------------------
+<body>
+<dl>
+	<dt>功能介绍</dt>
+	<dd><a href="../2常用的标签.html" target="center" >公司简介</a></dd>
+    <dd><a href="#">产品介绍</a></dd>
+    <dd><a href="#">公司荣耀</a></dd>
+    <dd><a href="#">招聘英才</a></dd>
+    <dd><a href="#">联系我们</a></dd>
+</dl>
+top.html
+--------------------------------------------
+<body>
+	<div align="center"><font color="#FF0000" size="30px">公司的logo</font></div>
+
+</body>
+foot.html
+--------------------------------------------
+<body>
+	<div align="center">
+    	合作伙伴：百度、 腾讯、 微软、甲骨文....<br/>
+        友情链接： 达内、 青鸟...<br/>
+        联系方式：020-123456
+		版权归属于于： &reg;传智播客
+    	
+    </div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

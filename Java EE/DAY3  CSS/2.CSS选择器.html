@@ -1,0 +1,171 @@
+html	负责页面结构
+CSS		负责页面数据的样式
+
+
+
+
+编写CSS的方式：
+		一：  在style（si炸 L）中编写
+				格式：<style type="text/css">
+							编写CSS代码  如：
+							color:#f00;
+							text-decoration:none;
+					  </style>
+		二：引入外部的CSS文件
+			方式1： 使用link标签
+				格式：
+					<link href="css文件的路径" rel=“stylesheet”/>
+												声明是一个样式的脚本	
+			方式2：使用 style 引入
+				格式：
+					<style>
+					@import url("CSS的路径");
+					</style>
+			
+			方式3：标签中使用style
+				格式：
+					a 是超链接标签
+					<a style="color:#0f0; text-decoration:none" href="#">新闻标签</a>
+	
+
+a.CSS
+-----------------------
+p {
+	color:#ff00
+}
+
+
+b.html
+-----------------------
+<head>
+	<link href="../../a.CSS" rel="stylesheet">
+</head>
+
+<body>
+	<p> P标签会附带css样式 <p>
+</body>
+-----------------------
+
+
+
+
+选择器： 找到对应的数据进行样式化
+	
+
+
+标签选择器：找到指定标签进行  样式
+		格式：	
+				标签名{
+					样式1；样式2...
+				}
+
+				 
+			例：对所有div标签作用
+
+				div{                  
+					color:#f00;
+					font-size：24px;
+				}
+
+	
+	
+	
+	
+类选择器：指定class属性 进行样式
+		格式：
+				.class{
+					样式1；样式2...
+				}
+
+
+			例：对所有div标签作用
+				.two{                  
+					color:#f00;
+					font-size：24px;
+				}
+
+				<div class="two">举个例子</div>
+				
+		
+ID选择器：先给html元素添加一个 ID属性值 
+		格式：
+				#ID{
+					样式1；样式2...
+				}
+		
+		
+		例：
+			#one{
+				color:#f00;
+				font-size：24px;
+			}
+			<div ID="one">举个例子</div>
+
+注：
+	1.类选择器和ID选择器 不能以数字开头
+	
+	2.优先级：
+			ID选择器 -> 类选择器 -> 标签选择器
+
+
+
+交集选着器 将选择器1中的2样式化（选择器2一定是在1里面的 才起作用）
+		格式：
+			选择器1 选择器2{
+				样式1；样式2...
+			}
+		例：
+			div span{
+				color:#f00;
+				font-size：24px;
+			}
+			<div id="one" class="test">实验一<span>实验二</span>实验三</div>
+			<span>对比分析</span>
+
+
+并集样式化：指定选择器进行 样式化
+
+
+通用选择器: (多 标签选择球)作用于全部
+		*{
+			样式...
+		}
+
+
+伪类选择器：元素处于某种转态下 样式	（超链接点击时的颜色）
+	<style>
+		a:link(color:#f00)		未点击		红
+		a:visited(color:#0f0)	点击过		绿	
+		a:hover(color:#00f;font-size:24px)	鼠标经过的状态
+		a:active(color:#000)	点击时
+	</style>
+
+
+
+注：
+	hover （hao we）必须位于link 和 visited之后 才有效
+	active		   必须位于hover之后 才有效
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

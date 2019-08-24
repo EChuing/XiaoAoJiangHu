@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+	
+	
+	//产生一个四位的验证码。
+	function createCode(){
+		var datas = ['A','B','何','敏','凡','江','1','9']; // 0-7  长度8
+		var code = "";
+		for(var i = 0 ; i<4; i++){
+			//随机产生四个索引值           
+			var index =  Math.floor(Math.random()*datas.length);
+			//floor 向下取整      乘上数组长度 （0.9*8）=7
+			// random 0.0-1.0（不包括1.0）
+			code+=datas[index];
+		}	
+		
+		var spanNode = document.getElementById("code");
+		spanNode.innerHTML = code;
+			
+		//操作样式
+		spanNode.style.fontSize ="24px";     
+		spanNode.style.color = "red";
+		spanNode.style.backgroundColor="gray";
+		spanNode.style.textDecoration = "line-through";
+	}
+//页面加载时 调用一次（不至于一开始没有验证码）
+function ready(){
+	createCode();
+}
+	
+
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<body onload="ready()">
+		（1）								 （2）
+	<span id="code"></span><a href="#" onclick="createCode()">看不清，换一个</a>						
+										
+</body>
+</html>
+
+
+（1）
+	onload 事件会在页面或图像加载完成后立即发生
+
+
+（2）
+	onclick是绑定事件，告诉浏览器在鼠标点击时候要做什么。 
+
+	click本身是方法作用是触发onclick事件，只要执行了元素的click()方法，就会触发onclick事件
+

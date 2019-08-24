@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+/*
+
+表单的校验中常用
+
+
+正则表达式的创建方式：
+
+Java中写在 “” 里面
+JavaScript写在 // 里面
+
+			
+
+	方式1：
+		/正则表达式/模式
+	re=/pattern/[flags]
+	
+	方式2：
+		new RegExp("正则表达式",模式);
+	
+
+
+正则表达式对象常用的方法：
+	 test() 使用正则对象去 匹配 字符串  
+			如果匹配成功返回ture，否则返回false.	
+	 
+	 exec()	根据正则表达式去 查找 字符串符合规则的内容。
+
+模式：
+	g （全文查找出现的所有 pattern） 	
+	i （忽略大小写）
+
+
+注意：
+	javaScript 中默认是在全部字符串中寻找    
+		
+		（^ $ 规定范围）
+		^ 开始
+		$ 结束
+
+	
+	var str = "hello123";
+	var reg = /^[A-Z0-9]+$/i;
+	alert("匹配吗？"+reg.test(str));	
+
+查找出三个字符组成的单词。
+*/
+	var str  ="da jia hao hao xue xi a";
+	var reg = /\b[a-z]{3}\b/gi;         \b : 单词边界匹配器
+	var line ="";
+	while((line = reg.exec(str))!=null){
+		document.write(line+"<br/>")
+	}
+	
+	
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+</body>
+</html>

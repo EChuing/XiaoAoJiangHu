@@ -1,0 +1,30 @@
+（01）oracle服务器由哪二部份组成？
+	      
+（02）SQL92/99标准有哪四大分类？
+    
+（03）select *,ename from emp这样写对吗？
+
+（04）NVL(a,b)函数是什么意思？
+      
+（05）select sysdate from dual;
+   
+（06）select ename from emp where ename like '%\_%' escape '\'是什么意思？ 
+
+（07）如果判断null值？
+  
+（08）order by能用列号排序呢？从几开始？号
+  
+（09）between .. and ..和in..是什么意思？
+   
+（10）select add_months(sysdate,-1) from dual是什么意思？
+
+
+
+
+
+
+
+
+
+
+

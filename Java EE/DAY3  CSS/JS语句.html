@@ -1,0 +1,165 @@
+javaScript
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+运算符：
+		
+		
+		+	:	加法、正数、连接符
+			
+				true 是 1 : false 是 0 
+
+				document.write((1+true)+"<br/>");    2
+				document.write((1+false)+"<br/>");	 1
+				document.write(("hello"+1)+"<br/>"); hello
+		
+		/	:	除法
+				var a = 10;
+				var b = 3;
+				document.write("0除于3="+(a/b)+"<br/>");  不能被整除 有小数
+		
+		比较运算符	
+				找得到对应位置的不同字符，  比较第一个不同字符的大小
+				找不到对应位置的不同字符，	比较两个字符的长度
+
+				字符串可以与数字比较
+
+		逻辑运算符
+
+				&&  两true 才为 true
+					
+				||	有一个true 都为 true
+				
+				！
+
+		三目运算符
+				(a>b ? Y : N );
+	
+
+语句：
+		控制语句 
+			if(){
+			}else{			
+			}	特殊: 判断条件可以写布尔表达式 或 任何数据
+						0 为 false ; 其余为 true
+		
+		选择语句
+			switch（）{
+				case 值1: 语句; break;
+				case 值2: 语句; break;
+				default 值3:语句;break;
+			}	特殊：case 后面可以是   常量 、 变量 、 表达式
+
+
+
+
+		while 循环 
+			while (条件){
+			}
+
+		do-while 循环
+			do{
+			}
+			while (条件);   
+		
+		for 循环
+			for (初始化语句 ; 判断条件 ; 循环后的语句 ){
+			}
+
+		
+
+		for-in 语句    （类似于增强for循环）
+			for(var 变量名 in 便利的目标){
+			
+			}
+			作用：	
+				遍历数组的元素			  显示的是数组的下标
+				遍历对象的所有属性数据 显示的是属性名
+
+			for-in 遍素数组元素：
+				var arr[12,13,46,80,1];   
+				for(var item in arr){
+					document.write(arr[item]+" "); //直接item只显示下标
+				}
+					for 遍历
+					var arr[12,8,15,2,4,6];
+					for(var index=0 ; index<arr.length ; index++){
+						document.write(arr[index]+"   ");
+					}
+
+
+			for-in 遍历对象
+				function Person(id,name){ //创建对象
+					this.id = id;
+					this.name = name;
+				}
+				遍历
+				for(var propert in p){
+					document.write(p[property]+" ");
+				}
+			
+
+
+		with 语句 （魏 F）  存储对象的语句、方法时不用重复指定对象
+				
+				with(document){  // 指定一次 后面不用重复写
+					for(var i=0;i<5;i++){			
+						for(var k=0;k<5;k++){	
+							write("*&nbsp");
+						}
+						write("<br/>");
+					}
+					write("<hr/>");
+				}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

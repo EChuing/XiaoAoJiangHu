@@ -1,0 +1,76 @@
+<table>  表格标签
+	
+"比较高级的是table 的td 里嵌套table 标签
+
+
+在以前的网页布局都是表格
+	问题：必需遇到 </table> 才会显示一个页面内容，网速慢的话会显示不出来
+
+后来一个表格被分成了三部分
+	<thead>  表头  可以不存在
+	<tbody>	 表体	至少一个
+	<tfoot>	 表尾	可以不存在
+	好处：加快内容的显示速度，提高用户的体验效果
+
+	
+表格使用的标签
+	table	表格
+	tr		行
+	td		单元格
+	th		表头			默认是：居中加粗
+	caption 表格的标题		在表格外顶端
+
+
+表格常用的属性			 
+	align		属性		center 居中
+	border		边框宽度
+	height		表格高度
+	width		表格长度
+	bordercolor	表格颜色
+	colspan		单元的占据列数  （ko Fan）
+	rowspan		单元格占据行数	Ve Fan
+
+
+
+	<table align="center"></table>   表格居中
+	<tr align="center"></tr>		 表格内容居中
+
+-------------------------------------
+
+
+<table align="left" border="lpx" bordercolor="#0066CC" 
+width="400px height="300px">  
+	<caption>期末开始成绩</caption>
+	<tr align="center">
+		<th rowspan="2">姓名</th>				<!-- 占据2行 -->
+			<td>请输入</td>
+			<td>你可以滚蛋了</td>
+			<td>你可以滚蛋了</td>
+	</tr>
+	<tr align="center">
+		
+			<td>请输入</td>
+			<td colspan="2">你可以滚蛋了</td>	<!-- 占据2列 -->
+	</tr>
+	<tr align="center">
+		<th>性别</th>
+			<td>请输入</td>
+			<td>你可以滚蛋了</td>
+			<td>你可以滚蛋了</td>
+	</tr>
+	<tr align="center">
+		<th>年龄</th>
+			<td>请输入</td>
+			<td colspan="2">你可以滚蛋了</td>
+	</tr>
+</table> 
+ 
+
+
+
+
+
+
+
+
+

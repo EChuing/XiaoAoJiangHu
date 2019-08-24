@@ -1,0 +1,53 @@
+表单标签
+
+	作用于提交数据给服务器
+
+
+根标签是<form>(fo en)
+
+常用属性：
+		action(a ke shen) 数据传输的地址
+		method(ma te d)	  提交数据的方式
+				1） get   （默认方式）提交的数据会显示在地址栏上
+				2） post		提交的数据不会显示在地址栏上
+注意：
+1.表单项的数据提交的服务器上  必须要有name的属性，不能输入的就用 value
+
+2.同一组复选框中name的值要统一
+<body>
+	<form action="http://www.baidu.com" method="post">
+文本框  （单行）
+		用户名	：<input type="text"/><br/>
+密码框
+		 密码	：<input type="password"/><br/>
+单选框									chacjed : 是否为默认值	
+		 性别	：	男<input name="sex" value="man" checked="true" type="radio"/> 
+					女<input name="sex" value="woman" type="radio"/>   <!-- 赋予name 是的只能二选一 -->
+						复选框 用value赋予名字 上传到服务器中
+下拉框										
+		来<select>  (sila te)
+			<option value="BJ">北京</option>(O xun)
+			<option value="SS">上海</option>   这里面也可以使用默认值 checked
+			<option valure="GZ">广州</option>	
+			<option value="SZ">深圳</option>
+		</select>
+复选框   复选框赋予name就是单选框
+		兴趣爱好：Java<input type="checkbox"/>   (in pute)
+								    正方形	
+				  JavaScript<input type"checkbox"/>
+文件上传框
+		大头照：<input name="image" type="file">
+文本域
+		个人简介：	
+		<textarea name="intro"  rows="10" cols="30">
+					行数	列数
+提交按钮
+		<input type="submit" value="注册"/> 
+					(se mate)
+		<input type="reset" value="重置"/>
+					(rui sate)
+
+				type= "   button  submit  reset  "
+							查询   注册   重置
+	</form>
+</body>

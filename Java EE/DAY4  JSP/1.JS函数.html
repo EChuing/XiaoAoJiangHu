@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ <script type="text/javascript">
+ JS函数
+
+
+函数的定义
+	
+	function 函数名(形参列表){
+		函数体;
+	}
+	
+		function add(a,b){    //形参直接定义 不能  var
+			var sum=a+b;
+			document.write("结果："+sum);
+		}
+
+		var result = add(1,2);
+		document.write("返回："+result);
+
+	在JS中 注意
+		1.不能用 var 关键字，定义形参
+		2.没用返回值类型 ， 需要返回值时 直接调用即可
+		3.不存在函数重载，相同会 覆盖 前面的函数
+		4.内部都隐式 维护论文arguments (a ze mensi)数组对象 ，传入函数的值 都优先传入 arguments （arguments 分配数据给形参） 
+			
+	
+
+
+
+		function  add(a,b){
+			var sum = a+b;
+			document.write("两个参数的总和："+ sum);	
+			//return sum;
+		}
+			
+		function add(){
+			document.write("长度："+arguments.length+"<br/>");
+			for(var index = 0 ; index<arguments.length ; index++){
+				document.write(arguments[index]+",");	
+			}
+		}
+		//调用函数
+		add(11,21,13,14);
+	
+自定义对象  （JS中没类 概念，有函数即可建对象）
+	一：有函数就有对象
+
+		function Person(){}
+		
+		var p = new Person();
+		p.id=110;
+		p.name = "红孩儿";
+		
+		//行为
+		p.say = function(){
+			alert("我是："+this.name);
+		}
+		
+		document.write("编号  "+p.id+"姓名  "+p.name);
+		p.say();
+	 
+
+	 二：用带参函数创建对象
+		function Person(id,name){
+			this.id = id;
+			this.name = name;
+			this.say = function(){
+					alert(name+",你知道么");
+			}
+		}
+		var p = new Person(110,"狗娃");
+		document.write("编号  "+p.id+"姓名  "+p.name);
+		p.say();
+
+
+	三：用Object函数 建对象
+		var p = new Object();
+		p.id = 110;
+		p.name = "铁蛋";
+	
+	
+	四：用 字面量方式创建
+		id:110,
+		name:"牛魔王",
+		say:function(){
+			alert(this.name+"呵呵")；
+		}
+ 
+ 
+ 
+ </script>
+ 
+ </head>
+ <body>
+  
+ </body>
+</html>

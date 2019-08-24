@@ -1,0 +1,52 @@
+<script type="text/javascript" >
+	var arr1 = ["狗娃","狗剩","铁蛋"];
+	var arr2 = ["永康","才厚"];
+	
+concat	把arr1与arr2的数组元素组成一个新的数组返回。
+	arr1 = arr1.concat(arr2); 
+	for(var index in arr1){
+		document.write(arr1[index]+",");	
+	}
+	
+
+join	使用指定的分隔符把数组中的元素拼装成一个字符串返回。
+	var elements = arr1.join(","); 
+	document.write("数组的元素："+elements);
+	
+	
+pop ：	移除数组中的最后一个元素并返回该元素。
+	document.write("删除最后的一个元素并返回："+arr1.pop()+"<br/>");
+	
+
+pnsh	将新元素添加到一个数组中，并返回数组的新长度值。
+	arr1.push("永康"); 
+	
+
+reverse	翻转数组的元素
+	arr1.reverse(); 
+	
+
+shift	移除数组中第一个元素，并且返回。
+	document.write("删除第一个元素并返回："+arr1.shift()+"<br/>"); 
+	
+
+slice	指定数组起、末索引值 截取元素，并且返回子数组。
+	var subArr = arr1.slice(1,2); 
+	document.write("子数组的元素："+subArr.join(",")+"<br/>");
+	
+	
+sort	排序，排序的时候一定要传入排序的方法。
+	arr1 = [19,1,20,5];
+	arr1.sort(sortNumber);
+	
+	function sortNumber(num1,num2){
+		return num1-num2;
+	}
+	
+
+splice	(删除的元素，删除的个数，"插入的元素") 要引号
+	arr1.splice(1,1,"张三","李四","王五"); 
+	
+	
+	document.write("数组的元素："+arr1.join(","));
+</script>

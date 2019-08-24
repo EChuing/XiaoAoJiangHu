@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+
+
+用HTML的标签属性找节点
+
+	获取 ID名
+	document.getElementById("html元素的id") 
+	获取 标签名
+	document.getElementsByTagName("标签名") 
+	获取 元素的name
+	document.getElementsByName("html元素的name")
+
+有 s 是数组
+
+	function showText(){
+		//根据ID属性值找元素
+		var inputNode = document.getElementById("userName");  
+		inputNode.value = "设置好了文本";
+	}
+
+/*	InnerHTml	设置标签体的内容的。
+	value	设置标签的value属性值.     */
+
+
+	function showImage(){
+		//根据标签名获取所有的标签对象。
+		var images = document.getElementsByTagName("img"); 
+		for(var i = 0 ; i<images.length ; i++){
+			images[i].src = "33.jpg";
+			images[i].width="100";
+			images[i].height="100";   //HTML中要 px ，这里不能写
+		}
+	}
+	
+	
+	
+	 function showDiv(){
+		var divs = document.getElementsByName("info"); //根据标签的name属性值取找对应的标签，返回的是一个数组。
+		for(var i = 0 ; i<divs.length ; i++){
+			divs[i].innerHTML = "哈哈".fontcolor("red");	
+		}
+	}
+
+
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<body>	
+	<input type="text" id="userName" value="请输入用户名..." /><input type="button" onclick="showText()" value="设置文本"/>
+    <hr/>
+    
+    <img src="" />
+    <img src="" />
+    <img src="" />
+    <input type="button" onclick="showImage()" value="显示图片"/>
+   <hr/>
+    <div name="info"></div>
+    <div name="info"></div>
+    <div name="info"></div>
+     <input type="button" onclick="showDiv()" value="设置div内容"/>
+    
+</body>
+</html>
